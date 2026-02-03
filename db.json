@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "2f3b",
+      "fullName": "Matias Aguirre Correa",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "isAdmin": "true"
+    },
+    {
+      "id": "1044",
+      "fullName": "Julio Vargas Camargo",
+      "email": "user@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "4e99",
+      "title": "asdfds",
+      "description": "fasfa",
+      "statusValue": "Pending",
+      "statusText": "Pending",
+      "importanceValue": "low",
+      "importanceText": "Low"
+    }
+  ]
+}

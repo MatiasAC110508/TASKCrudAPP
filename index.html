@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body
+  class="min-h-screen flex items-center justify-center p-4
+         bg-gradient-to-b from-black via-[#060d22] to-black
+         text-[#ecf1ff] font-sans">
+
+  <div
+    class="w-full max-w-sm bg-[#0A1A3A]
+           rounded-lg shadow-[0px_10px_10px_#000516] p-6">
+
+    <!-- Icon -->
+    <div class="flex justify-center mb-4">
+      <div
+        class="w-10 h-10 flex items-center justify-center
+               rounded-full bg-[#163169] text-white text-xl font-bold">
+        ✓
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1
+      class="text-xl font-semibold text-center
+             bg-[#163169] text-white p-2 rounded-lg">
+      CRUDTASK
+    </h1>
+
+    <p class="text-sm text-center text-[#ecf1ff]/70 mt-4 mb-6">
+      Login to your account
+    </p>
+
+    <!-- Form -->
+    <form id="form-login" class="space-y-4">
+
+      <!-- Email -->
+      <div class="flex flex-col text-left">
+        <label class="text-sm font-bold mb-1">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="name@example.com"
+          class="w-full p-2 rounded-lg bg-black/30
+                 text-[#ecf1ff] placeholder-[#ecf1ff]
+                 outline-none focus:ring-2 focus:ring-[#163169]" />
+      </div>
+
+      <!-- Password -->
+      <div class="flex flex-col text-left">
+        <label class="text-sm font-bold mb-1">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Your password"
+          class="w-full p-2 rounded-lg bg-black/30
+                 text-[#ecf1ff] placeholder-[#ecf1ff]
+                 outline-none focus:ring-2 focus:ring-[#163169]" />
+      </div>
+
+      <!-- Button -->
+      <button
+        type="submit"
+        class="w-full bg-black text-white py-2 rounded-lg
+               transition hover:bg-[#163169]">
+        Sign in
+      </button>
+
+    </form>
+
+    <!-- Navigation -->
+    <p class="text-sm text-center text-[#ecf1ff]/70 mt-4">
+      Don’t have an account?
+      <button
+        id="sing-up"
+        data-route="register.html"
+        class="font-semibold text-[#ecf1ff] hover:underline">
+        Sign up
+      </button>
+    </p>
+
+    <p class="text-xs text-center text-[#ecf1ff]/50 mt-6">
+      RestorApp Academic Simulation
+    </p>
+
+  </div>
+
+  <script src="./JS/main.js" type="module"></script>
+</body>
+</html>

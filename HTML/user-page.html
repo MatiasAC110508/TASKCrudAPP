@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>User Page</title>
+</head>
+<body>
+    <!doctype html>
+<html lang="en">
+<head>
+<body>
+
+  <header>
+
+    <h1>CRUDTASK</h1>
+
+    <form id="formSearch">
+      <input
+        type="search"
+        id="searchFilter"
+        placeholder="Search"
+        aria-label="Search"
+      >
+      <button type="submit" class="btn-outline-success">Search</button> 
+      <button id="profile">My profile</button>
+      <div id="profile-card">
+        <!-- 
+          JS insertará múltiples <tr>
+          Cada <tr> contiene th y td (display:block)
+        → visualmente se repite como card
+    -->
+      </div>
+      <button id="log-out">Log-Out</button>
+      
+    </form>
+
+  </header>
+
+  <form id="myform">
+
+    <div class="label-container">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title">
+    </div>
+
+    <div class="label-container">
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description">
+    </div>
+
+    <div id="prioridad-label">
+      <div>
+        <label for="importance">Importance</label>
+        <select name="importance" id="importance">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="status">Status</label>
+        <select name="status" id="status">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+    <div id="mensaje"></div>
+  </form>
+
+  <div id="contenedor-tablas">
+    <!-- 
+      JS insertará múltiples <tr>
+      Cada <tr> contiene th y td (display:block)
+      → visualmente se repite como card
+    -->
+  </div>
+
+  <div id="mensajeFiltro"></div>
+
+    <script type="module" src="../JS/user-services/user-page.js"></script>
+</body>
+</html>
