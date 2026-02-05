@@ -13,6 +13,22 @@ export async function loginUser() {
         const userInDb = await getUserByEmail(form.email.value)
         console.log(userInDb)
 
+        if (!userInDb){
+            console.error("The email is not singed up!. Please create an account.")
+            const alert = document.getElementById("alert")
+
+            alert.textContent = "The email is not singed up!. Please create an account.";
+            alert.style.cssText = `
+              color: #dc2626;
+              font-size: 14px;
+              margin-top: 8px;
+              text-align: center;
+              width: 100%;     
+            `;
+
+            setTimeout(() => alert.remove(), 2000);
+        }
+
         if (userInDb.password == form.password.value) {
             sessionStorage.setItem("isLoged", true)
             sessionStorage.setItem("userEmail", userInDb.email)
@@ -26,7 +42,19 @@ export async function loginUser() {
                 window.location.href = "HTML/user-page.html"
             }
         } else {
-            alert("La contraseña no es la correcta")
+            console.error("The password is not correct.")
+            const alert = document.getElementById("alert")
+
+            alert.textContent = "The password is not correct.";
+            alert.style.cssText = `
+              color: #dc2626;
+              font-size: 14px;
+              margin-top: 8px;
+              text-align: center;
+              width: 100%;     
+            `;
+
+            setTimeout(() => alert.remove(), 2000);
         }
 
     })

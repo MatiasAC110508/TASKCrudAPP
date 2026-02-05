@@ -1,4 +1,4 @@
-import {postjs, url} from "../services/fetch-functions.js"
+import {postjs, url, getUserByEmail} from "../services/fetch-functions.js"
 import { autoLogOut } from "../services/guardians.js"
 
 autoLogOut()
@@ -43,13 +43,44 @@ async function registerUserService(body) {
 async function registerUser() {
 
     // Escuchar evento de submit
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
         event.preventDefault()
+        const jsonData = JSON.parse(getDataFromForm("form-register"));
         const data = getDataFromForm("form-register")
-        if (data.confirmPassword === data.password) {
-            registerUserService(data)
+        const userInDb = await getUserByEmail(jsonData.email)
+
+        if (userInDb){
+            console.error("The email is already singed up!. Please use another eamil.")
+            const alert = document.getElementById("alert")
+
+            alert.textContent = "The email is already singed up!. Please use another email.";
+            alert.style.cssText = `
+                color: #dc2626;
+                font-size: 14px;
+                margin-top: 8px;
+                text-align: center;
+                width: 100%;     
+            `;
+
+            setTimeout(() => alert.remove(), 2000);
         } else {
-            alert("las contraseñas no coindicen")
+            if (jsonData.confirmPassword === jsonData.password) {
+                registerUserService(data)
+            } else {
+                console.error("The passwords do not match!, please try again.")
+                const alert = document.getElementById("alert")
+
+                alert.textContent = "The passwords do not match!, please try again.";
+                alert.style.cssText = `
+                    color: #dc2626;
+                    font-size: 14px;
+                    margin-top: 8px;
+                    text-align: center;
+                    width: 100%;     
+                `;
+
+                setTimeout(() => alert.remove(), 2000);
+            }
         }
     })
 }

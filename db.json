@@ -15,16 +15,5 @@
       "password": "1234",
       "confirmPassword": "1234"
     }
-  ],
-  "tasks": [
-    {
-      "id": "4e99",
-      "title": "asdfds",
-      "description": "fasfa",
-      "statusValue": "Pending",
-      "statusText": "Pending",
-      "importanceValue": "low",
-      "importanceText": "Low"
-    }
   ]
 }

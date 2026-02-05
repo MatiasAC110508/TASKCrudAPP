@@ -4,7 +4,6 @@ export async function getUserByEmail(email) {
 
     const user = await getjs(`${url}/users?email=${email}`)
     return user[0]
-
 }
 
 export async function getjs(url, errorMessage) {

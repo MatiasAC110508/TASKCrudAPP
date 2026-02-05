@@ -48,7 +48,8 @@
           placeholder="John Doe"
           class="w-full p-2 rounded-lg bg-black/30
                  text-[#ecf1ff] placeholder-[#ecf1ff]
-                 outline-none focus:ring-2 focus:ring-[#163169]" />
+                 outline-none focus:ring-2 focus:ring-[#163169]" 
+          required/>
       </div>
 
       <!-- Email -->
@@ -57,10 +58,12 @@
         <input
           id="email"
           type="email"
+          name="email"
           placeholder="name@example.com"
           class="w-full p-2 rounded-lg bg-black/30
                  text-[#ecf1ff] placeholder-[#ecf1ff]
-                 outline-none focus:ring-2 focus:ring-[#163169]" />
+                 outline-none focus:ring-2 focus:ring-[#163169]" 
+          required/>
       </div>
 
       <!-- Password -->
@@ -72,7 +75,8 @@
           placeholder="********"
           class="w-full p-2 rounded-lg bg-black/30
                  text-[#ecf1ff] placeholder-[#ecf1ff]
-                 outline-none focus:ring-2 focus:ring-[#163169]" />
+                 outline-none focus:ring-2 focus:ring-[#163169]" 
+          required/>
       </div>
 
       <!-- Confirm Password -->
@@ -84,8 +88,11 @@
           placeholder="********"
           class="w-full p-2 rounded-lg bg-black/30
                  text-[#ecf1ff] placeholder-[#ecf1ff]
-                 outline-none focus:ring-2 focus:ring-[#163169]" />
+                 outline-none focus:ring-2 focus:ring-[#163169]" 
+          required/>
       </div>
+
+      <div id="alert"></div>
 
       <!-- Button -->
       <button
